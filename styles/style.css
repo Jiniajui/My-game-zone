@@ -1,0 +1,15 @@
+.nav-items{
+    border: 1px solid red;
+    min-height: 60px;
+}
+.logo-items{
+    border: 1px solid green;
+    display: flex;
+}
+.logo-items img{
+    border: 1px solid red;
+    width: 50px; 
+}
+.nav-menu-items{
+    border: 1px solid blue;
+}
