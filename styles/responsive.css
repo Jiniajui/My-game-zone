@@ -31,6 +31,10 @@
         flex-direction: column;
         align-items: center;
     }
+    .play{
+        display: block;
+        padding: 50px;
+    }
     .button{
         display: grid;
         grid-template-columns: repeat(3,1fr);
@@ -68,6 +72,10 @@
     .online-content-img{
         flex-direction: column;
         align-items: center;
+    }
+    .play{
+        display: block;
+        padding: 50px;
     }
     .button{
         display: grid;
