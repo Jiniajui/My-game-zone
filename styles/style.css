@@ -11,6 +11,8 @@ body{
 
 /* nav style start */
 nav{
+    width: 100%;
+    height: 100%;
     background-color: white;
 }
 .nav-items{
@@ -19,6 +21,7 @@ nav{
     align-items: center;
     max-width: 1400px;
     margin: 0 auto;
+    padding: 0 100px;
 }
 
 .logo-items{
@@ -75,15 +78,19 @@ nav{
 
 /* banner style start */
 .banner{
-    max-width: 1400px;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     margin: auto;
 }
 .banner-content{
-    background: linear-gradient(223deg, rgba(140, 87, 238, 0.03) 0%, rgba(241, 68, 174, 0.03) 100%);;
+    background-image: url(../images/Group\ 14.png);
     width: 50%;
+    max-height: 100%;
     margin: auto;
+    text-align: start;
+    padding: 150px 150px;
 }
 .banner-content h3{
     color: #0B0223;
@@ -110,6 +117,9 @@ nav{
     text-transform: lowercase;
     margin: 20px 0;
 
+}
+.banner-content h6 i{
+    color: var(--linear, linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%))
 }
 .banner-content .banner-click{
     background: var(--linear, linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%))
@@ -140,7 +150,9 @@ nav{
 /* gamer style start */
 
 .gamer{
-    max-width: 1400px;
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -149,6 +161,7 @@ nav{
 
 .gamer-content{
     text-align: end;
+    padding-right: 100px;
 }
 .gamer-content h3{
     background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
@@ -177,9 +190,11 @@ nav{
 
 /* online style start */
 .online{
-    max-width: 1400px;
+    width: 100%;
+    height: 100%;
     text-align: center;
     margin: auto;
+    padding: 150px;
 }
 .online-content h3{
     color: #0B0223;
@@ -208,18 +223,37 @@ nav{
     border-radius: 16px;
     position: relative;
 }
+.online-image img{
+    width: 90%;
+    height: 90%;
+}
 .online-image-overlay{
     border-radius: 16px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
-    text-align: center;
+	width: 90%;
+	height: 90%;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-wrap: wrap;
     margin: auto 0;
 	opacity: 0;
 	trasition: .5s;
+    overflow-y: hidden;
+}
+.online-image-overlay h5{
+    background: var(--linear, linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+}
+.online-image-overlay i {
+    color: white;
+    font-size: 20px;
 }
 .online-image:hover .online-image-overlay{
     opacity: .9;
@@ -230,7 +264,8 @@ nav{
 /* play style start*/
 
 .play{
-    max-width: 1400px;
+    width: 100%;
+    height: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -240,7 +275,6 @@ nav{
 
 .play-content{
     width: 50%;
-    position: relative;
 }
 .play-content h3{
     color: #0B0223;
@@ -259,54 +293,92 @@ nav{
     font-size: 18px;
     font-weight: 400;
 }
-.play-img-it{
-    position: absolute;
-    top:-80%;
-    left: -20%;
-    width: 30%;
-    height: 50%;
-}
-.play-img img{
+.play-img{
+    position: relative;
     width: 50%;
+}
+.play-img-image{
+    position: absolute;
+    top: 60%;
+    left: -20%;
 }
 
 /* play style end*/
 
+/* button style start*/
 .button{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 30px;
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
     text-align: center;
-    max-width: 1400px;
+    margin: 100px auto;
     padding: 100px 0;
+}
+.button-item1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.button-item2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+
+}
+.button-content a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+.button-content a icon{
 }
 
 .btn-active{
     background-color: white;
     border: none;
-    padding-top: 20px;
     text-align: center;
     color: #0B0223;
     font-size: 20px;
     cursor: pointer;
 }
 
-.btn-active icon img{
-    width: 60px;
-    height: 60px;
+.button-content icon img{
+    width: 40px;
+    height: 40px;
 
 }
 
-.btn-active:hover{
+.button-content:hover{
     border: 1px solid rgb(255, 34, 185);
     border-radius: 50px;
+    margin: 0;
 }
 
+/* button style end*/
+
+/* footer style start*/
 .footer{
     background-color: black;
-    max-width: 1400px;
+    width: 100%;
+    height: 100%;
     text-align: center;
     padding: 100px 0;
+}
+.footer-items img{
+    width: 86.041px;
+    height: 40px;
+    margin-top: 40px;
+}
+.footer h3{
+    color: white;
+    font-size: 40px;
 }
 .footer-items{
     display: flex;
@@ -325,6 +397,8 @@ nav{
 }
 .social-icon a{
     margin-right: 15px;
+    color: white;
+    margin-bottom: 10px;
 }
 .footer-list{
     margin-bottom: 20px;
@@ -340,4 +414,6 @@ nav{
     font-size: 16px;
     font-weight: 500;
 }
+
+/* footer style end*/
 
